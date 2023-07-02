@@ -1,0 +1,4 @@
+[submodule "kubernetes-ingress"]
+	path = kubernetes-ingress
+	url = https://github.com/nginxinc/kubernetes-ingress.git
+	branch = v3.2.0

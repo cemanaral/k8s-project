@@ -1,3 +1,4 @@
+cat <<EOF | kubectl apply -f -
 apiVersion: certificates.k8s.io/v1
 kind: CertificateSigningRequest
 metadata:
@@ -5,11 +6,13 @@ metadata:
 spec:
   groups:
   - system:authenticated
-  request: $(cat ../certificates/cem.csr | base64 | tr -d "\n")
+  request: $(cat cem.csr | base64 | tr -d "\n")
   signerName: kubernetes.io/kube-apiserver-client
   usages:
   - client auth
----
+EOF
+
+cat <<EOF | kubectl apply -f -
 apiVersion: certificates.k8s.io/v1
 kind: CertificateSigningRequest
 metadata:
@@ -17,7 +20,8 @@ metadata:
 spec:
   groups:
   - system:authenticated
-  request: $(cat ../certificates/can.csr | base64 | tr -d "\n")
+  request: $(cat can.csr | base64 | tr -d "\n")
   signerName: kubernetes.io/kube-apiserver-client
   usages:
   - client auth
+EOF

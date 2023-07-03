@@ -22,4 +22,6 @@ worker-2	10.0.2.6    (production)
 worker-3	10.0.2.7    (production)
 
 worker-4	10.0.2.8    (dev/test)
-
+## RBAC
+cem -> junior
+can -> senior

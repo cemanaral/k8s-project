@@ -24,4 +24,15 @@ worker-3	10.0.2.7    (production)
 worker-4	10.0.2.8    (dev/test)
 ## RBAC
 cem -> junior
+
 can -> senior
+## Storage
+I used Azure File with NFS protocol for persistent volumes
+
+Storage account name: k8sstorageaccountcem
+
+NFS Server: k8sstorageaccountcem.file.core.windows.net:/k8sstorageaccountcem/k8s-nfs 
+
+Mount Path (worker nodes): /mount/k8sstorageaccountcem/k8s-nfs
+
+

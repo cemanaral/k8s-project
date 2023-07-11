@@ -6,6 +6,7 @@ metadata:
    labels:
      app: wordpress
 spec:
+  storageClassName: wordpresspv-test
   capacity:
     storage: 5Gi
   accessModes:

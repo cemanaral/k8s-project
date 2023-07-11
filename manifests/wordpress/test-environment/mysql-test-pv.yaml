@@ -9,7 +9,7 @@ metadata:
 spec:
   storageClassName: mysqlpv-test 
   capacity:
-    storage: 20Gi
+    storage: 5Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle

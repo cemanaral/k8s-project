@@ -22,6 +22,7 @@ metadata:
     app: wordpress
     tier: mysql
 spec:
+  storageClassName: mysqlpv-test 
   accessModes:
     - ReadWriteOnce
   resources:

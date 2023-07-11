@@ -7,8 +7,9 @@ metadata:
      app: wordpress
      tier: mysql
 spec:
+  storageClassName: mysqlpv-test 
   capacity:
-    storage: 5Gi
+    storage: 20Gi
   accessModes:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Recycle

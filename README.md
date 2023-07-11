@@ -35,4 +35,11 @@ NFS Server: k8sstorageaccountcem.file.core.windows.net:/k8sstorageaccountcem/k8s
 
 Mount Path (worker nodes): /mount/k8sstorageaccountcem/k8s-nfs
 
+## Credentials
+### Wordpress
+#### Test Environment
+mysql user wordpress
+
+mysql pass test123
+#### Production Environment
 

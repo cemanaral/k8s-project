@@ -2,6 +2,7 @@ secretGenerator:
 - name: mysql-pass
   literals:
   - password=test123
+namespace: test
 resources:
   - mysql-test-deployment.yaml
   - mysql-test-pv.yaml

@@ -33,13 +33,21 @@ Storage account name: k8sstorageaccountcem
 
 NFS Server: k8sstorageaccountcem.file.core.windows.net:/k8sstorageaccountcem/k8s-nfs 
 
-Mount Path (worker nodes): /mount/k8sstorageaccountcem/k8s-nfs
+Mount Path: /mount/k8sstorageaccountcem/k8s-nfs
 
 ## Credentials
-### Wordpress
-#### Test Environment
+### Test Environment
 mysql user wordpress
 
 mysql pass test123
-#### Production Environment
+
+wordpress user admin
+
+wordpress pass 123
+### Production Environment
+mysql user worpdress
+
+mysql pass prod123
+
+wordpress user admin
 

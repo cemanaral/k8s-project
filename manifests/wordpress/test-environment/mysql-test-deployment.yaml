@@ -49,6 +49,16 @@ spec:
         app: wordpress
         tier: mysql
     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - wordpress
+            topologyKey: "kubernetes.io/hostname"
       containers:
       - image: mysql:5.6
         name: mysql
@@ -73,6 +83,13 @@ spec:
         volumeMounts:
         - name: mysql-persistent-storage
           mountPath: /var/lib/mysql
+        resources:
+          requests:
+            memory: "64M"
+            cpu: "250m"
+          limits:
+            memory: "256M"
+            cpu: "500m"      
       volumes:
       - name: mysql-persistent-storage
         persistentVolumeClaim:

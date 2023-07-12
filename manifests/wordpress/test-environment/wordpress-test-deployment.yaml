@@ -35,6 +35,16 @@ metadata:
   labels:
     app: wordpress
 spec:
+  affinity:
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+          - key: app
+            operator: In
+            values:
+            - wordpress
+        topologyKey: "kubernetes.io/hostname"
   selector:
     matchLabels:
       app: wordpress
@@ -66,6 +76,13 @@ spec:
         volumeMounts:
         - name: wordpress-persistent-storage
           mountPath: /var/www/html
+        resources:
+          requests:
+            memory: "64M"
+            cpu: "250m"
+          limits:
+            memory: "256M"
+            cpu: "500m"
       volumes:
       - name: wordpress-persistent-storage
         persistentVolumeClaim:

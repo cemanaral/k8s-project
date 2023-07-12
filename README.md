@@ -51,3 +51,4 @@ mysql pass prod123
 
 wordpress user admin
 
+wordpress pass 123

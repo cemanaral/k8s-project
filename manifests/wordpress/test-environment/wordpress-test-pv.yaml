@@ -13,5 +13,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /k8sstorageaccountcem/k8s-nfs/
+    path: /k8sstorageaccountcem/k8s-nfs/test/wordpress
     server: k8sstorageaccountcem.file.core.windows.net

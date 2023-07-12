@@ -35,16 +35,6 @@ metadata:
   labels:
     app: wordpress
 spec:
-  affinity:
-    podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
-      - labelSelector:
-          matchExpressions:
-          - key: app
-            operator: In
-            values:
-            - wordpress
-        topologyKey: "kubernetes.io/hostname"
   selector:
     matchLabels:
       app: wordpress
@@ -57,6 +47,16 @@ spec:
         app: wordpress
         tier: frontend
     spec:
+      affinity:
+        podAffinity:
+          requiredDuringSchedulingIgnoredDuringExecution:
+          - labelSelector:
+              matchExpressions:
+              - key: app
+                operator: In
+                values:
+                - wordpress
+            topologyKey: "kubernetes.io/hostname"
       containers:
       - image: wordpress:latest
         name: wordpress

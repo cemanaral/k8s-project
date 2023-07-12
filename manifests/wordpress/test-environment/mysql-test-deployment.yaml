@@ -24,7 +24,7 @@ metadata:
 spec:
   storageClassName: mysqlpv-test 
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 5Gi

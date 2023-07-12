@@ -23,7 +23,7 @@ metadata:
 spec:
   storageClassName: wordpresspv-test
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   resources:
     requests:
       storage: 5Gi

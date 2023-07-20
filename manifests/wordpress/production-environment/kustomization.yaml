@@ -1,0 +1,10 @@
+secretGenerator:
+- name: mysql-pass
+  literals:
+  - password=prod123
+namespace: production
+resources:
+  - mysql-production-deployment.yaml
+  - mysql-production-pv.yaml
+  - wordpress-production-deployment.yaml
+  - wordpress-production-pv.yaml

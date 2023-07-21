@@ -47,6 +47,11 @@ spec:
         app: wordpress
         tier: frontend
     spec:
+      tolerations:
+      - key: "environment"
+        operator: "Equal"
+        value: "production"
+        effect: "NoExecute"
       affinity:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:

@@ -49,6 +49,11 @@ spec:
         app: wordpress
         tier: mysql
     spec:
+      tolerations:
+      - key: "environment"
+        operator: "Equal"
+        value: "production"
+        effect: "NoExecute"
       affinity:
         podAffinity:
           requiredDuringSchedulingIgnoredDuringExecution:

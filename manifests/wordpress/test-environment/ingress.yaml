@@ -16,5 +16,6 @@ spec:
             backend:
               service:
                 name: wordpress
+                namespace: test
                 port:
                   number: 80

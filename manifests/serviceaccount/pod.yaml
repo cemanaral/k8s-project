@@ -7,7 +7,6 @@ spec:
   serviceAccountName: readonlysa
   containers:
   - name: testcontainer
-    image: nicolaka/netshoot
-    command: ["/bin/sh"]
+    image: ozgurozturknet/k8s:latest
     ports:
     - containerPort: 80

@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: sapod
+  namespace: default
+spec:
+  serviceAccountName: readonlysa
+  containers:
+  - name: testcontainer
+    image: curlimages/curl:8.2.0
+    ports:
+    - containerPort: 80

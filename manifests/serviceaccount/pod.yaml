@@ -8,5 +8,6 @@ spec:
   containers:
   - name: testcontainer
     image: nicolaka/netshoot
+    command: ["/bin/sh"]
     ports:
     - containerPort: 80

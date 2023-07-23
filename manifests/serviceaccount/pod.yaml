@@ -7,6 +7,6 @@ spec:
   serviceAccountName: readonlysa
   containers:
   - name: testcontainer
-    image: curlimages/curl:8.2.0
+    image: nicolaka/netshoot
     ports:
     - containerPort: 80

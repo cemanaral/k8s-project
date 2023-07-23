@@ -12,7 +12,7 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /k8sstorageaccountcem/k8s-nfs/mongodb
+    path: /k8sstorageaccountcem/k8s-nfs/mongodb/0
     server: k8sstorageaccountcem.file.core.windows.net
 ---
 apiVersion: v1
@@ -29,5 +29,5 @@ spec:
     - ReadWriteMany
   persistentVolumeReclaimPolicy: Recycle
   nfs:
-    path: /k8sstorageaccountcem/k8s-nfs/mongodb
+    path: /k8sstorageaccountcem/k8s-nfs/mongodb/1
     server: k8sstorageaccountcem.file.core.windows.net

@@ -8,3 +8,4 @@ resources:
   - mysql-production-pv.yaml
   - wordpress-production-deployment.yaml
   - wordpress-production-pv.yaml
+  - ingress.yaml

@@ -8,3 +8,4 @@ resources:
   - mysql-test-pv.yaml
   - wordpress-test-deployment.yaml
   - wordpress-test-pv.yaml
+  - ingress.yaml

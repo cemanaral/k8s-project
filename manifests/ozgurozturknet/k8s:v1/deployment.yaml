@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ozgurozturknet
+  namespace: production
 spec:
   replicas: 5
   selector:
@@ -17,6 +18,11 @@ spec:
       labels:
         app: ozgurozturknet
     spec:
+      tolerations:
+      - key: "environment"
+        operator: "Equal"
+        value: "production"
+        effect: "NoExecute"
       containers:
       - name: ozgurozturknet
         image: ozgurozturknet/k8s:v1
